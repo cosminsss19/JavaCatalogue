@@ -1,6 +1,8 @@
 package org.example;
 
-public class User {
+import java.io.Serializable;
+
+public abstract class User implements Serializable {
     private String name;
 
     public User(String name) {
@@ -13,6 +15,6 @@ public class User {
 
     @Override
     public String toString() {
-        return "Nume: " + name;
+        return "Name: " + name;
     }
 }
