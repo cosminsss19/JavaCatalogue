@@ -1,11 +1,12 @@
 package org.example;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Grade {
     private Double value;
     private Date insertionDate;
-    public void GradeAssignation(Double gradeValue)
+    public Grade(Double gradeValue)
     {
         value=gradeValue;
         insertionDate=new Date();
@@ -16,5 +17,9 @@ public class Grade {
     }
     public Date getInsertionDate() {
         return insertionDate;
+    }
+    public String toString() {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+        return "Grade: " + value + " | Date: " + dateFormat.format(insertionDate);
     }
 }

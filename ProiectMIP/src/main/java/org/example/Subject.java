@@ -3,11 +3,11 @@ package org.example;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Discipline {
+public class Subject {
     private String name;
     private List<Grade> gradeList=new ArrayList<>();
     private Double finalAverage;
-    public Discipline(String disciplineName)
+    public Subject(String disciplineName)
     {
         this.name=disciplineName;
     }
@@ -35,5 +35,13 @@ public class Discipline {
     public Double getFinalAverage()
     {
         return this.finalAverage;
+    }
+
+    @Override
+    public String toString() {
+        return "Discipline{" +
+                "name='" + name + '\'' +
+                ", finalAverage=" + finalAverage +
+                '}';
     }
 }
